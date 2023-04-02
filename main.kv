@@ -1,0 +1,62 @@
+<AntiPlagiarismChecker>:
+    orientation: "vertical"
+    spacing: "10dp"
+    padding: "10dp"
+
+    MDCard:
+        size_hint: 1, None
+        height: "60dp"
+
+        MDLabel:
+            text: "Select a file:"
+            halign: "center"
+
+    MDCard:
+        size_hint: 1, None
+        height: "200dp"
+
+        FileChooserListView:
+            id: file_chooser
+
+    MDCard:
+        size_hint: 1, None
+        height: "60dp"
+
+        MDLabel:
+            text: "Enter the copied text:"
+            halign: "center"
+
+    MDCard:
+        size_hint: 1, None
+        height: "200dp"
+
+        MDTextField:
+            id: copied_text_box
+            multiline: True
+
+    MDCard:
+        size_hint: 1, None
+        height: "60dp"
+
+        MDLabel:
+            text: "Enter the original text:"
+            halign: "center"
+
+    MDCard:
+        size_hint: 1, None
+        height: "200dp"
+
+        MDTextField:
+            id: original_text_box
+            multiline: True
+
+    MDCard:
+        size_hint: 1, None
+        height: "60dp"
+
+        MDRectangleFlatButton:
+            text: "Check Plagiarism"
+            on_press: root.check_plagiarism()
+
+<Root>:
+    AntiPlagiarismChecker:
